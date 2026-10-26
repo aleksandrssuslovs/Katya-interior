@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Екатерина Ефремова — дизайнер интерьера, консультации</title>
+<meta name="description" content="Консультация дизайнера интерьера Екатерины Ефремовой. Современный дизайн, который отражает вашу личность и улучшает качество жизни. Консультация: 89 €.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#ece6dd;
+  --paper:#f6f2ec;
+  --navy:#1b2236;
+  --walnut:#6b4a33;
+  --taupe:#b9a999;
+  --marble:#e3dfd8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--linen);color:var(--navy);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--walnut);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+header{position:absolute;top:0;left:0;right:0;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:600;text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:32px}
+nav a{text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--walnut)}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-text{position:relative;z-index:2;width:54%;padding:140px 48px 80px max(32px,calc((100vw - 1200px)/2 + 32px))}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,5.2vw,4.8rem);line-height:1.06;letter-spacing:-.01em;margin-bottom:28px}
+.hero p{max-width:30em;font-size:1.1rem;margin-bottom:40px;color:#3a4056}
+.price{font-family:var(--serif);font-size:1.7rem;font-weight:600;margin-bottom:20px}
+.price span{font:400 1rem var(--sans);color:#3a4056;margin-left:8px}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;font:500 .95rem var(--sans);text-decoration:none;border:1px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer}
+.btn-fill{background:var(--navy);color:var(--paper)}
+.btn-fill:hover{background:var(--walnut);border-color:var(--walnut)}
+.btn-line:hover{background:var(--navy);color:var(--paper)}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:72%;background:url('images/katyalogo.jpg') center 18%/cover;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 55%);mask-image:linear-gradient(90deg,transparent 0,#000 55%)}
+
+
+section{padding:112px 0}
+.about{background:var(--paper)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about h2{margin-bottom:0}
+.about p{color:#3a4056;max-width:34em}
+.about p+p{margin-top:16px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4vw,3.3rem);line-height:1.1;margin-bottom:48px;letter-spacing:-.005em}
+
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+.rev-head h2{margin-bottom:0}
+.arrows{display:flex;gap:12px;flex-shrink:0}
+.arrow{width:52px;height:52px;border:1px solid var(--navy);background:transparent;color:var(--navy);font-size:1.4rem;line-height:1;cursor:pointer}
+.arrow:hover:not(:disabled){background:var(--navy);color:var(--paper)}
+.arrow:disabled{opacity:.3;cursor:default}
+.reviews{display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.reviews::-webkit-scrollbar{display:none}
+.reviews blockquote{flex:0 0 calc((100% - 80px)/3);scroll-snap-align:start}
+blockquote{font:italic 1.35rem/1.45 var(--serif);border-top:2px solid var(--walnut);padding-top:22px}
+blockquote footer{font:400 .9rem var(--sans);font-style:normal;margin-top:18px;color:var(--walnut)}
+
+.approach{background:var(--navy);color:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;counter-reset:s;list-style:none}
+.steps li{counter-increment:s;border-top:1px solid #56607a;padding-top:22px}
+.steps li::before{content:counter(s);font:italic 2.6rem var(--serif);color:var(--taupe);display:block;line-height:1;margin-bottom:14px}
+.steps h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;margin-bottom:8px}
+.steps p{font-size:.97rem;color:#c9ccd8}
+
+.contact{background:var(--paper)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+.contact h2{margin-bottom:32px}
+.links a{display:block;font:500 1.8rem var(--serif);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--taupe)}
+.links a:hover{color:var(--walnut)}
+.links small{display:block;font:400 .8rem var(--sans);color:#6b6f80}
+footer.site{padding:28px 0;font-size:.85rem;color:#6b6f80}
+
+dialog{margin:auto;border:none;background:var(--paper);color:var(--navy);padding:40px;width:min(92vw,400px)}
+dialog::backdrop{background:rgba(27,34,54,.6)}
+dialog h3{font:500 1.8rem var(--serif);margin-bottom:24px}
+dialog a{display:block;padding:16px 0;border-bottom:1px solid var(--taupe);text-decoration:none;font-weight:500}
+dialog a:hover{color:var(--walnut)}
+dialog .close{margin-top:24px;background:none;border:none;font:400 .9rem var(--sans);color:#6b6f80;cursor:pointer;text-decoration:underline}
+@media(max-width:900px){
+  body{font-size:16px}
+  header{position:static;background:var(--linen)}
+  header .wrap{flex-direction:column;height:auto;padding-top:16px;padding-bottom:12px;gap:6px}
+  .logo{font-size:1.4rem}
+  nav{display:flex;gap:16px}
+  nav a{font-size:.9rem;padding:8px 0}
+  .wrap{padding:0 20px}
+  .hero{min-height:calc(100svh - 92px);align-items:flex-end}
+  .hero-photo{width:100%;background-position:62% top;-webkit-mask-image:linear-gradient(180deg,#000 38%,transparent 72%);mask-image:linear-gradient(180deg,#000 38%,transparent 72%)}
+  .hero-text{width:100%;padding:0 20px 40px;margin-top:300px}
+  .hero h1{font-size:2.4rem;margin-bottom:16px}
+  .hero p{font-size:1rem;margin-bottom:28px}
+  .btns{flex-direction:column;gap:12px}
+  .btn{width:100%;text-align:center;padding:16px 20px}
+      section{padding:64px 0}
+  .about .wrap{grid-template-columns:1fr;gap:24px}
+  h2{font-size:2rem;margin-bottom:32px}
+  .steps{grid-template-columns:1fr;gap:32px}
+  .rev-head{margin-bottom:28px}
+  .rev-head h2{font-size:2rem}
+  .arrow{width:46px;height:46px}
+  .reviews{gap:24px}
+  .reviews blockquote{flex:0 0 86%}
+  blockquote{font-size:1.25rem}
+  .steps li{padding-top:18px}
+  .contact .wrap{grid-template-columns:1fr;gap:40px}
+  .links a{font-size:1.35rem;padding:14px 0;overflow-wrap:anywhere}
+  dialog{padding:28px 24px}
+  dialog a{padding:18px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Екатерина Ефремова</a>
+    <nav aria-label="Основное меню">
+      <a href="#about">Обо мне</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#approach">Мой подход</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Дизайнер интерьера Екатерина Ефремова</h1>
+      <p>Создам ваше идеальное пространство. Современный дизайн, который отражает вашу личность и улучшает качество жизни.</p>
+      <div class="price">89&nbsp;€<span>стоимость консультации</span></div>
+      <div class="btns">
+        <button type="button" class="btn btn-fill" data-open>Записаться на консультацию</button>
+        <a class="btn btn-line" href="#about">Узнать больше</a>
+      </div>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Екатерина Ефремова за рабочим столом с планировкой и образцами материалов"></div>
+  </div>
+
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2>500+ клиентов доверили мне своё пространство</h2>
+      <div>
+        <p>Меня зовут Екатерина, я дизайнер интерьера. Помогаю разобраться с планировкой, цветом, материалами и мебелью, чтобы пространство работало на вас и вам в нём было хорошо.</p>
+        <p>Работаю с квартирами, домами и коммерческими помещениями в любом стиле: от минимализма до классики. Стиль выбираем вместе, исходя из того, как вы живёте.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="rev-head">
+        <h2>Что говорят мои клиенты</h2>
+        <div class="arrows">
+          <button type="button" class="arrow" id="prev" aria-label="Предыдущий отзыв">&larr;</button>
+          <button type="button" class="arrow" id="next" aria-label="Следующий отзыв">&rarr;</button>
+        </div>
+      </div>
+      <div class="reviews" id="reviews-track" tabindex="0" aria-label="Отзывы клиентов">
+        <blockquote>“Катя полностью преобразила наш дом. Она слушала наши идеи, но и давала свои профессиональные советы. Результат превзошёл все ожидания!”<footer>Анна, квартира в центре</footer></blockquote>
+        <blockquote>“Создала функциональное пространство, которое вдохновляет команду каждый день. Профессионализм на самом высоком уровне.”<footer>Дмитрий, офис стартапа</footer></blockquote>
+        <blockquote>“Просто волшебница! Из скучного помещения сделала роскошный лофт. Благодарна за внимание к деталям и стиль.”<footer>Елена, гостиная и спальня</footer></blockquote>
+        <!-- ПРИМЕРЫ: замените на настоящие отзывы клиентов Кати перед публикацией -->
+        <blockquote>“После консультации мы наконец поняли, как расставить мебель в небольшой квартире. Стало и просторнее, и уютнее.”<footer>Мария, двухкомнатная квартира</footer></blockquote>
+        <blockquote>“Катя помогла выбрать материалы и цвета, и мы не потратили лишнего на ремонт. Очень внимательный и спокойный специалист.”<footer>Сергей, кухня и прихожая</footer></blockquote>
+        <blockquote>“Мне нужен был взгляд со стороны. За одну встречу Катя предложила решения, до которых я бы сама не дошла.”<footer>Ольга, спальня</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="approach">
+    <div class="wrap">
+      <h2>Мой подход</h2>
+      <ol class="steps">
+        <li><h3>Слушание</h3><p>Сначала я слушаю ваши мечты и потребности.</p></li>
+        <li><h3>Идеи</h3><p>Создаю концепцию, которая отражает вашу личность.</p></li>
+        <li><h3>Реализация</h3><p>Воплощаю идею в жизнь с вниманием к деталям.</p></li>
+        <li><h3>Результат</h3><p>Пространство, которое вы полюбите на всю жизнь.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <div>
+        <h2>Давайте начнём</h2>
+        <div class="price">89&nbsp;€<span>стоимость консультации</span></div>
+        <div class="btns">
+          <button type="button" class="btn btn-fill" data-open>Связаться</button>
+          <a class="btn btn-line" href="https://instagram.com/katya.interior.space" target="_blank" rel="noopener">Мои работы</a>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://wa.me/37129903139" target="_blank" rel="noopener"><small>WhatsApp</small>+371 29 903 139</a>
+        <a href="mailto:mirgalak@gmail.com"><small>Email</small>mirgalak@gmail.com</a>
+        <a href="https://instagram.com/katya.interior.space" target="_blank" rel="noopener"><small>Instagram</small>@katya.interior.space</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">© 2026 Екатерина Ефремова, дизайнер интерьера</div></footer>
+
+
+<dialog id="choose" aria-labelledby="choose-title">
+  <h3 id="choose-title">Как удобнее связаться?</h3>
+  <a href="https://wa.me/37129903139" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="mailto:mirgalak@gmail.com">Почта</a>
+  <a href="https://instagram.com/katya.interior.space" target="_blank" rel="noopener">Instagram</a>
+  <button type="button" class="close" data-close>Закрыть</button>
+</dialog>
+
+<script>
+  const dlg=document.getElementById('choose');
+  document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>dlg.showModal()));
+  dlg.querySelector('[data-close]').addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+  const track=document.getElementById('reviews-track'),prev=document.getElementById('prev'),next=document.getElementById('next');
+  const step=()=>{const c=track.querySelector('blockquote');return c.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||getComputedStyle(track).gap||0)};
+  const upd=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4};
+  prev.addEventListener('click',()=>track.scrollBy({left:-step()}));
+  next.addEventListener('click',()=>track.scrollBy({left:step()}));
+  track.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',upd);upd();
+</script>
+</body>
+</html>
